@@ -31,12 +31,16 @@ int SumOfNatureNumbers(int numM, int numN)
 
 
 Console.Clear();
-string title = "Сумма натуральных элементов от M до N.\n"
-            + "--------------------------------------";
+string title = "Сумма натуральных элементов от M до N\n"
+            + "-------------------------------------";
 Console.WriteLine(title);
 
 int numberM = GetNumberFromUser("Введите число M: ");
 int numberN = GetNumberFromUser("Введите число N: ");
 
-int result = SumOfNatureNumbers(numberM, numberN);
-Console.WriteLine($"Сумма от M до N = {result}");
+if (numberM > 0 && numberN > 0)
+{
+    int result = SumOfNatureNumbers(numberM, numberN);
+    Console.WriteLine($"Сумма от M до N = {result}");
+}
+else Console.WriteLine("Числа M и N должны быть натуральными. Повторите ввод.");
