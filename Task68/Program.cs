@@ -26,5 +26,10 @@ Console.WriteLine(title);
 int numberM = GetNumberFromUser("Введите число m: ");
 int numberN = GetNumberFromUser("Введите число n: ");
 
-int result = AkkermanFunction(numberM, numberN);
-Console.WriteLine($"A({numberM},{numberN}) = {result}");
+
+if (numberM >= 0 & numberN >= 0)
+{
+    int result = AkkermanFunction(numberM, numberN);
+    Console.WriteLine($"A({numberM},{numberN}) = {result}");
+}
+else Console.WriteLine("Числа m и n должны быть целыми, неотрицательными. Повторите ввод.");
