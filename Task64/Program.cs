@@ -21,11 +21,15 @@ void NatureNumbersRevert(int num)
 }
 
 Console.Clear();
-string title = "Вывод натуральных чисел в промежутке от N до 1.\n"
-             + "-----------------------------------------------";
+string title = "Вывод натуральных чисел в промежутке от N до 1\n"
+             + "----------------------------------------------";
 Console.WriteLine(title);
 
 int number = GetNumberFromUser("Введите число N: ");
 
-Console.Write($"N = {number} -> ");
-NatureNumbersRevert(number);
+if (number > 0)
+{
+    Console.Write($"N = {number} -> ");
+    NatureNumbersRevert(number);
+}
+else Console.WriteLine("Число N должно быть натуральным. Повторите ввод.");
